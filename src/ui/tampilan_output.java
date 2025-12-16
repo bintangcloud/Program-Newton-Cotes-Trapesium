@@ -208,6 +208,7 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(3, 75, 75));
         jLabel14.setText("Jumlah Iterasi");
 
+        tempatintegralnumerik.setEditable(false);
         tempatintegralnumerik.setBackground(new java.awt.Color(163, 216, 216));
         tempatintegralnumerik.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,6 +216,7 @@ public class tampilan_output extends javax.swing.JFrame {
             }
         });
 
+        tempatnilaieksak.setEditable(false);
         tempatnilaieksak.setBackground(new java.awt.Color(163, 216, 216));
         tempatnilaieksak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,6 +224,7 @@ public class tampilan_output extends javax.swing.JFrame {
             }
         });
 
+        galatabsolut.setEditable(false);
         galatabsolut.setBackground(new java.awt.Color(163, 216, 216));
         galatabsolut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,6 +232,7 @@ public class tampilan_output extends javax.swing.JFrame {
             }
         });
 
+        iterasi.setEditable(false);
         iterasi.setBackground(new java.awt.Color(163, 216, 216));
         iterasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,10 +527,13 @@ public class tampilan_output extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Nilai h harus lebih besar dari 0!");
         return;
     }
+    
+    double nDouble = (b - a) / h;
+    int n = (int) Math.round(nDouble);
 
-    double n = (b - a) / h;
-    if (n % 1 != 0) {
-        JOptionPane.showMessageDialog(this, "(b - a) harus habis dibagi h!");
+    if (Math.abs(nDouble - n) > 1e-9) {
+        JOptionPane.showMessageDialog(this,
+            "(b - a) harus habis dibagi h!");
         return;
     }
 

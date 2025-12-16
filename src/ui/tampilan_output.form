@@ -502,6 +502,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="tempatintegralnumerik">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="d8" red="a3" type="rgb"/>
             </Property>
@@ -512,6 +513,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="tempatnilaieksak">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="d8" red="a3" type="rgb"/>
             </Property>
@@ -522,6 +524,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="galatabsolut">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="d8" red="a3" type="rgb"/>
             </Property>
@@ -532,6 +535,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="iterasi">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d8" green="d8" red="a3" type="rgb"/>
             </Property>
