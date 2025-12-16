@@ -4,6 +4,9 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author chee
@@ -38,31 +41,31 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        tempatb = new javax.swing.JTextField();
+        tempata = new javax.swing.JTextField();
+        tempath = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnhitung = new javax.swing.JButton();
+        btnreset = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        tempatintegralnumerik = new javax.swing.JTextField();
+        tempatnilaieksak = new javax.swing.JTextField();
+        galatabsolut = new javax.swing.JTextField();
+        iterasi = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tabeliterasi = new javax.swing.JTable();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -108,24 +111,24 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(3, 75, 75));
         jLabel8.setText("h");
 
-        jTextField1.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tempatb.setBackground(new java.awt.Color(163, 216, 216));
+        tempatb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tempatbActionPerformed(evt);
             }
         });
 
-        jTextField2.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tempata.setBackground(new java.awt.Color(163, 216, 216));
+        tempata.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tempataActionPerformed(evt);
             }
         });
 
-        jTextField3.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        tempath.setBackground(new java.awt.Color(163, 216, 216));
+        tempath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                tempathActionPerformed(evt);
             }
         });
 
@@ -138,30 +141,30 @@ public class tampilan_output extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setForeground(new java.awt.Color(3, 75, 75));
-        jRadioButton3.setText("(4)  ∫(ln x )/x dx");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
-            }
-        });
-
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setForeground(new java.awt.Color(3, 75, 75));
-        jRadioButton4.setText("(2)  ∫√(x^2 + 1) dx");
+        jRadioButton4.setText("(4)  ∫(ln x )/x dx");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton4ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setForeground(new java.awt.Color(3, 75, 75));
-        jRadioButton5.setText("(3)  ∫5^x dx");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(3, 75, 75));
+        jRadioButton2.setText("(2)  ∫√(x^2 + 1) dx");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setForeground(new java.awt.Color(3, 75, 75));
+        jRadioButton3.setText("(3)  ∫5^x dx");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
             }
         });
 
@@ -169,23 +172,23 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(8, 147, 147));
         jLabel9.setText("PILIHAN SOAL");
 
-        jButton1.setBackground(new java.awt.Color(109, 197, 197));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Hitung");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnhitung.setBackground(new java.awt.Color(109, 197, 197));
+        btnhitung.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnhitung.setForeground(new java.awt.Color(255, 255, 255));
+        btnhitung.setText("Hitung");
+        btnhitung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnhitungActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(109, 197, 197));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Reset");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnreset.setBackground(new java.awt.Color(109, 197, 197));
+        btnreset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnreset.setForeground(new java.awt.Color(255, 255, 255));
+        btnreset.setText("Reset");
+        btnreset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnresetActionPerformed(evt);
             }
         });
 
@@ -205,31 +208,31 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(3, 75, 75));
         jLabel14.setText("Jumlah Iterasi");
 
-        jTextField4.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        tempatintegralnumerik.setBackground(new java.awt.Color(163, 216, 216));
+        tempatintegralnumerik.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                tempatintegralnumerikActionPerformed(evt);
             }
         });
 
-        jTextField5.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        tempatnilaieksak.setBackground(new java.awt.Color(163, 216, 216));
+        tempatnilaieksak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                tempatnilaieksakActionPerformed(evt);
             }
         });
 
-        jTextField6.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        galatabsolut.setBackground(new java.awt.Color(163, 216, 216));
+        galatabsolut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                galatabsolutActionPerformed(evt);
             }
         });
 
-        jTextField7.setBackground(new java.awt.Color(163, 216, 216));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        iterasi.setBackground(new java.awt.Color(163, 216, 216));
+        iterasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                iterasiActionPerformed(evt);
             }
         });
 
@@ -242,9 +245,9 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Putu Chika Maharani (2415101016)");
 
-        jTable2.setBackground(new java.awt.Color(227, 249, 249));
-        jTable2.setForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tabeliterasi.setBackground(new java.awt.Color(227, 249, 249));
+        tabeliterasi.setForeground(new java.awt.Color(0, 0, 0));
+        tabeliterasi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -266,9 +269,9 @@ public class tampilan_output extends javax.swing.JFrame {
                 "i", "x", "f(x)"
             }
         ));
-        jTable2.setSelectionBackground(new java.awt.Color(204, 255, 255));
-        jTable2.setSelectionForeground(new java.awt.Color(204, 255, 255));
-        jScrollPane2.setViewportView(jTable2);
+        tabeliterasi.setSelectionBackground(new java.awt.Color(204, 255, 255));
+        tabeliterasi.setSelectionForeground(new java.awt.Color(204, 255, 255));
+        jScrollPane2.setViewportView(tabeliterasi);
 
         jScrollPane3.setViewportView(jScrollPane2);
 
@@ -300,16 +303,16 @@ public class tampilan_output extends javax.swing.JFrame {
                                         .addGap(21, 21, 21)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jRadioButton1)
-                                            .addComponent(jRadioButton4))
+                                            .addComponent(jRadioButton2))
                                         .addGap(45, 45, 45)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton5)
-                                            .addComponent(jRadioButton3)))
+                                            .addComponent(jRadioButton3)
+                                            .addComponent(jRadioButton4)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(202, 202, 202)
-                                        .addComponent(jButton1)
+                                        .addComponent(btnhitung)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton2)))
+                                        .addComponent(btnreset)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(6, 6, 6)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,15 +322,15 @@ public class tampilan_output extends javax.swing.JFrame {
                                             .addGap(25, 25, 25)
                                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tempata, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(60, 60, 60)
                                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tempatb, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(59, 59, 59)
                                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(tempath, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(jLabel9))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -347,10 +350,10 @@ public class tampilan_output extends javax.swing.JFrame {
                                         .addComponent(jLabel13)))))
                         .addGap(34, 34, 34)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tempatnilaieksak, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(galatabsolut, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(iterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tempatintegralnumerik, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -375,11 +378,11 @@ public class tampilan_output extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tempata, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tempath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tempatb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -387,15 +390,15 @@ public class tampilan_output extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jRadioButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton5)
+                        .addComponent(jRadioButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnhitung)
+                    .addComponent(btnreset, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -403,18 +406,18 @@ public class tampilan_output extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tempatintegralnumerik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tempatnilaieksak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(galatabsolut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iterasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -436,57 +439,149 @@ public class tampilan_output extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tempatbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatbActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tempatbActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tempataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempataActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tempataActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void tempathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempathActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tempathActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
+        // Kosongkan input
+    tempata.setText("");
+    tempatb.setText("");
+    tempath.setText("");
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    // Reset radio button
+    jRadioButton1.setSelected(false);
+    jRadioButton2.setSelected(false);
+    jRadioButton3.setSelected(false);
+    jRadioButton4.setSelected(false);
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    // Bersihkan tabel
+    DefaultTableModel model = (DefaultTableModel) tabeliterasi.getModel();
+    model.setRowCount(0);
+
+    // Reset hasil
+    tempatintegralnumerik.setText("Integral Numerik : ");
+    tempatnilaieksak.setText("Integral Eksak   : ");
+    galatabsolut.setText("Galat Absolut    : ");
+    iterasi.setText("Jumlah Iterasi   : ");
+    }//GEN-LAST:event_btnresetActionPerformed
+
+    private void btnhitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhitungActionPerformed
+        // 1. Validasi input kosong
+    if (tempata.getText().isEmpty() || tempatb.getText().isEmpty() || tempath.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Isi batas bawah, batas atas, dan h!");
+        return;
+    }
+
+    // 2. Validasi pilihan soal
+    int soal = 0;
+    if (jRadioButton1.isSelected()) soal = 1;
+    else if (jRadioButton2.isSelected()) soal = 2;
+    else if (jRadioButton3.isSelected()) soal = 3;
+    else if (jRadioButton4.isSelected()) soal = 4;
+  
+
+    if (soal == 0) {
+        JOptionPane.showMessageDialog(this, "Pilih salah satu soal!");
+        return;
+    }
+
+    // 3. Parsing input
+    double a, b, h;
+    try {
+        a = Double.parseDouble(tempata.getText());
+        b = Double.parseDouble(tempatb.getText());
+        h = Double.parseDouble(tempath.getText());
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Input harus berupa angka!");
+        return;
+    }
+
+    // 4. Validasi numerik
+    if (b <= a) {
+        JOptionPane.showMessageDialog(this, "Batas atas harus lebih besar dari batas bawah!");
+        return;
+    }
+
+    if (h <= 0) {
+        JOptionPane.showMessageDialog(this, "Nilai h harus lebih besar dari 0!");
+        return;
+    }
+
+    double n = (b - a) / h;
+    if (n % 1 != 0) {
+        JOptionPane.showMessageDialog(this, "(b - a) harus habis dibagi h!");
+        return;
+    }
+
+    // 5. Kosongkan tabel
+    DefaultTableModel model = (DefaultTableModel) tabeliterasi.getModel();
+    model.setRowCount(0);
+
+    // 6. Ambil iterasi
+    var data = logic.Trapesium.getIterasi(a, b, h, soal);
+
+    for (var it : data) {
+        model.addRow(new Object[]{
+            it.i,
+            String.format("%.4f", it.x),
+            String.format("%.4f", it.fx),
+            it.bobot,
+            String.format("%.4f", it.fx * it.bobot)
+        });
+    }
+
+    // 7. Hitung hasil
+    double numerik = logic.Trapesium.hitungIntegral(a, b, h, soal);
+    double eksak = logic.Trapesium.nilaiEksak(a, b, soal);
+    double galat = Math.abs(eksak - numerik);
+
+    // 8. Tampilkan hasil
+    tempatintegralnumerik.setText("Integral Numerik : " + String.format("%.4f", numerik));
+    tempatnilaieksak.setText("Integral Eksak   : " + String.format("%.4f", eksak));
+    galatabsolut.setText("Galat Absolut    : " + String.format("%.4f", galat));
+    iterasi.setText("Jumlah Iterasi   : " + (int) n);
+    }//GEN-LAST:event_btnhitungActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void iterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iterasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_iterasiActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void tempatintegralnumerikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatintegralnumerikActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_tempatintegralnumerikActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void tempatnilaieksakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatnilaieksakActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_tempatnilaieksakActionPerformed
+
+    private void galatabsolutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_galatabsolutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_galatabsolutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -524,9 +619,11 @@ public class tampilan_output extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnhitung;
+    private javax.swing.JButton btnreset;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField galatabsolut;
+    private javax.swing.JTextField iterasi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -546,20 +643,18 @@ public class tampilan_output extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTable tabeliterasi;
+    private javax.swing.JTextField tempata;
+    private javax.swing.JTextField tempatb;
+    private javax.swing.JTextField tempath;
+    private javax.swing.JTextField tempatintegralnumerik;
+    private javax.swing.JTextField tempatnilaieksak;
     // End of variables declaration//GEN-END:variables
 }
