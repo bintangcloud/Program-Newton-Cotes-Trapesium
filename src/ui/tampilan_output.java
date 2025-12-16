@@ -476,10 +476,10 @@ public class tampilan_output extends javax.swing.JFrame {
     model.setRowCount(0);
 
     // Reset hasil
-    tempatintegralnumerik.setText("Integral Numerik : ");
-    tempatnilaieksak.setText("Integral Eksak   : ");
-    galatabsolut.setText("Galat Absolut    : ");
-    iterasi.setText("Jumlah Iterasi   : ");
+    tempatintegralnumerik.setText("");
+    tempatnilaieksak.setText("");
+    galatabsolut.setText("");
+    iterasi.setText("");
     }//GEN-LAST:event_btnresetActionPerformed
 
     private void btnhitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhitungActionPerformed
@@ -553,10 +553,10 @@ public class tampilan_output extends javax.swing.JFrame {
     double galat = Math.abs(eksak - numerik);
 
     // 8. Tampilkan hasil
-    tempatintegralnumerik.setText("Integral Numerik : " + String.format("%.4f", numerik));
-    tempatnilaieksak.setText("Integral Eksak   : " + String.format("%.4f", eksak));
-    galatabsolut.setText("Galat Absolut    : " + String.format("%.4f", galat));
-    iterasi.setText("Jumlah Iterasi   : " + (int) n);
+    tempatintegralnumerik.setText(" " + String.format("%.4f", numerik));
+    tempatnilaieksak.setText(" " + String.format("%.4f", eksak));
+    galatabsolut.setText(" " + String.format("%.4f", galat));
+    iterasi.setText(" " + (int) n);
     }//GEN-LAST:event_btnhitungActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
