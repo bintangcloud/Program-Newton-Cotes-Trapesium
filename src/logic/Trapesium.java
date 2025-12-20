@@ -64,18 +64,28 @@ public class Trapesium {
 
     // Nilai eksak
     public static double nilaiEksak(double a, double b, int soal) {
-        switch (soal) {
-            case 1:
-                return (Math.exp(5 * b) - Math.exp(5 * a)) / 5;
-            case 2:
-                return (b / 2) * Math.sqrt(b * b + 1) + Math.log(b + Math.sqrt(b * b + 1)) / 2
-                     - ((a / 2) * Math.sqrt(a * a + 1) + Math.log(a + Math.sqrt(a * a + 1)) / 2);
-            case 3:
-                return (Math.pow(5, b) - Math.pow(5, a)) / Math.log(5);
-            case 4:
-                return 0.5 * (Math.pow(Math.log(b), 2) - Math.pow(Math.log(a), 2));
-            default:
-                return 0;
-        }
+    switch (soal) {
+        case 1:
+            return (Math.exp(5 * b) - Math.exp(5 * a)) / 5.0;
+
+        case 2:
+            return (
+                (b * Math.sqrt(b*b + 1)) / 2.0
+                + 0.5 * Math.log(Math.abs(Math.sqrt(b*b + 1) + b))
+            ) - (
+                (a * Math.sqrt(a*a + 1)) / 2.0
+                + 0.5 * Math.log(Math.abs(Math.sqrt(a*a + 1) + a))
+            );
+
+        case 3:
+            return (Math.pow(5, b) / Math.log(5))
+                 - (Math.pow(5, a) / Math.log(5));
+
+        case 4:
+            return 0.5 * (Math.pow(Math.log(b), 2) - Math.pow(Math.log(a), 2));
+
+        default:
+            return 0;
     }
+}
 }

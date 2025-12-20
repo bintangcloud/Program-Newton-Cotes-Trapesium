@@ -714,23 +714,39 @@ public class tampilan_output extends javax.swing.JFrame {
         }
 
         // 4. Validasi numerik
+        int n = 0; 
+        double nDouble = 0;
+
+        // Penampung pesan error
+        StringBuilder pesanError = new StringBuilder();
+
+
+        // Cek Batas
         if (b <= a) {
-            JOptionPane.showMessageDialog(this, "Batas atas harus lebih besar dari batas bawah!");
-            return;
+            pesanError.append("- Batas atas (b) harus lebih besar dari batas bawah (a)!\n");
         }
 
+        // Cek h
         if (h <= 0) {
-            JOptionPane.showMessageDialog(this, "Nilai h harus lebih besar dari 0!");
-            return;
+            pesanError.append("- Nilai h harus lebih besar dari 0!\n");
         }
 
-        double nDouble = (b - a) / h;
-        int n = (int) Math.round(nDouble);
+        // Cek Sisa Bagi (Hanya hitung n jika h aman)
+        if (h > 0) {
+            // Langsung pakai nama variabelnya karena sudah dideklarasi di atas.
+            nDouble = (b - a) / h;
+            n = (int) Math.round(nDouble);
 
-        if (Math.abs(nDouble - n) > 1e-9) {
-            JOptionPane.showMessageDialog(this,
-                "(b - a) harus habis dibagi h!");
-            return;
+            if (Math.abs(nDouble - n) > 1e-9) {
+                pesanError.append("- Rentang (b - a) harus habis dibagi dengan h!\n");
+            }
+        }
+
+        // Stop jika ada eror, tampilkan pesan
+        if (pesanError.length() > 0) {
+            JOptionPane.showMessageDialog(this, 
+                "Mohon perbaiki kesalahan berikut:\n" + pesanError.toString());
+            return; 
         }
 
         // 5. Kosongkan tabel
