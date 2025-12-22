@@ -761,8 +761,7 @@ public class tampilan_output extends javax.swing.JFrame {
                 it.i,
                 String.format("%.4f", it.x),
                 String.format("%.4f", it.fx),
-                it.bobot,
-                String.format("%.4f", it.fx * it.bobot)
+                String.format("%.4f", h * it.fx)
             });
         }
 

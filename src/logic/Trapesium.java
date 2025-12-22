@@ -16,13 +16,11 @@ public class Trapesium {
         public int i;
         public double x;
         public double fx;
-        public int bobot;
 
-        public Iterasi(int i, double x, double fx, int bobot) {
+        public Iterasi(int i, double x, double fx) {
             this.i = i;
             this.x = x;
             this.fx = fx;
-            this.bobot = bobot;
         }
     }
 
@@ -45,21 +43,27 @@ public class Trapesium {
         for (int i = 0; i <= n; i++) {
             double x = a + i * h;
             double fx = fungsi(x, soal);
-            int bobot = (i == 0 || i == n) ? 1 : 2;
-            list.add(new Iterasi(i, x, fx, bobot));
+            list.add(new Iterasi(i, x, fx));
         }
         return list;
     }
 
     // Integral trapesium
     public static double hitungIntegral(double a, double b, double h, int soal) {
-        List<Iterasi> data = getIterasi(a, b, h, soal);
-        double sum = 0;
+       List<Iterasi> data = getIterasi(a, b, h, soal);
+        int n = data.size() - 1;
 
-        for (Iterasi it : data) {
-            sum += it.bobot * it.fx;
+        double hasil = 0;
+
+        // f0 + fn
+        hasil += (h / 2) * (data.get(0).fx + data.get(n).fx);
+
+        // sum tengah
+        for (int i = 1; i < n; i++) {
+            hasil += h * data.get(i).fx;
         }
-        return (h / 2) * sum;
+
+        return hasil;
     }
 
     // Nilai eksak
