@@ -30,8 +30,12 @@ public class Trapesium {
             case 1: return Math.exp(5 * x);
             case 2: return Math.sqrt(x * x + 1);
             case 3: return Math.pow(5, x);
-            case 4: return Math.log(x) / x;
-            default: return 0;
+            case 4: 
+            if (x <= 0) {
+                return 0; 
+            }
+            return Math.log(x) / x;
+        default: return 0;
         }
     }
 
@@ -86,8 +90,9 @@ public class Trapesium {
                  - (Math.pow(5, a) / Math.log(5));
 
         case 4:
-            return 0.5 * (Math.pow(Math.log(b), 2) - Math.pow(Math.log(a), 2));
-
+            double termB = (b <= 0) ? 0 : Math.pow(Math.log(b), 2);
+            double termA = (a <= 0) ? 0 : Math.pow(Math.log(a), 2);
+            return 0.5 * (termB - termA);
         default:
             return 0;
     }
