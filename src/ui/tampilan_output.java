@@ -305,7 +305,7 @@ public class tampilan_output extends javax.swing.JFrame {
                                         .addComponent(jRadioButton4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel21)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                                 .addComponent(btnhitung)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnreset))))
@@ -361,7 +361,7 @@ public class tampilan_output extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                                 .addComponent(jLabel2)
                                 .addGap(262, 262, 262)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -434,7 +434,7 @@ public class tampilan_output extends javax.swing.JFrame {
         jLabel13.setText("Galat Absolut  ");
 
         jLabel14.setForeground(new java.awt.Color(3, 75, 75));
-        jLabel14.setText("Jumlah Iterasi");
+        jLabel14.setText("n");
 
         galatabsolut.setEditable(false);
         galatabsolut.setBackground(new java.awt.Color(163, 216, 216));
@@ -552,11 +552,8 @@ public class tampilan_output extends javax.swing.JFrame {
                                         .addGap(1, 1, 1)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel12)
-                                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                                    .addComponent(jLabel14)
-                                                    .addGap(7, 7, 7))
-                                                .addComponent(jLabel13)))))
+                                            .addComponent(jLabel13)
+                                            .addComponent(jLabel14))))
                                 .addGap(34, 34, 34)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tempatnilaieksak, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
